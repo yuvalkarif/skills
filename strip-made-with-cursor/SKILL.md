@@ -1,9 +1,9 @@
 ---
-name: block-cursor-branding
-description: Set up Cursor hooks to automatically strip "Made with Cursor" branding from code, commits, and PR text before they are written. Use when the user wants to remove Cursor branding, block "Made with Cursor" text, or add a preToolUse hook to prevent Cursor attribution.
+name: strip-made-with-cursor
+description: Set up Cursor hooks to automatically strip "Made with Cursor" branding from code, commits, and PR text before they are written. Use when the user wants to remove Cursor branding, strip "Made with Cursor" text, or add a preToolUse hook to prevent Cursor attribution.
 ---
 
-# Setup Block Cursor Branding
+# Setup Strip Made With Cursor
 
 Sets up a `preToolUse` hook that intercepts tool calls and silently strips "Made with Cursor" (and its markdown-link variant) from any string values before Cursor writes them.
 
@@ -22,12 +22,12 @@ Ask the user: install for **this project only** (`.cursor/hooks.json`) or **glob
 
 ### 2. Copy the hook script
 
-The bundled script is at: [scripts/block-made-with-cursor.sh](scripts/block-made-with-cursor.sh)
+The bundled script is at: [scripts/strip-made-with-cursor.sh](scripts/strip-made-with-cursor.sh)
 
 Copy it to the target location based on scope:
 
-- **Project**: `.cursor/hooks/block-made-with-cursor.sh`
-- **Global**: `~/.cursor/hooks/block-made-with-cursor.sh`
+- **Project**: `.cursor/hooks/strip-made-with-cursor.sh`
+- **Global**: `~/.cursor/hooks/strip-made-with-cursor.sh`
 
 Make it executable with `chmod +x`.
 
@@ -43,7 +43,7 @@ Add to the appropriate `hooks.json` file:
   "hooks": {
     "preToolUse": [
       {
-        "command": "bash .cursor/hooks/block-made-with-cursor.sh"
+        "command": "bash .cursor/hooks/strip-made-with-cursor.sh"
       }
     ]
   }
@@ -58,7 +58,7 @@ Add to the appropriate `hooks.json` file:
   "hooks": {
     "preToolUse": [
       {
-        "command": "bash ~/.cursor/hooks/block-made-with-cursor.sh"
+        "command": "bash ~/.cursor/hooks/strip-made-with-cursor.sh"
       }
     ]
   }

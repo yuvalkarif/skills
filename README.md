@@ -4,10 +4,10 @@ Installable agent skills for AI coding tools.
 
 ## Available Skills
 
-### block-cursor-branding
+### strip-made-with-cursor
 
 Automatically strips "Made with Cursor" branding from code, commits, and PR text.
 
 ```bash
-npx skills add yuvalkarif/skills/block-cursor-branding
+npx skills add yuvalkarif/skills/strip-made-with-cursor
 ```
