@@ -6,7 +6,7 @@ Installable agent skills for AI coding tools.
 
 ### strip-made-with-cursor
 
-Automatically strips "Made with Cursor" branding from code, commits, and PR text.
+Automatically strips "`Made with [Cursor](https://cursor.com)`" from your PRs, which Cursor started injecting.
 
 ```bash
 npx skills add yuvalkarif/skills/strip-made-with-cursor

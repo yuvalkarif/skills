@@ -72,7 +72,7 @@ If the `hooks.json` file already exists, merge the hook entry into the existing 
 Run a quick test:
 
 ```bash
-echo '{"tool_name":"edit_file","tool_input":{"content":"Made with Cursor"}}' | bash <path-to-script>
+echo '{"tool_name":"edit_file","tool_input":{"content":"Made with [Cursor](https://cursor.com)"}}' | bash <path-to-script>
 ```
 
 Should return JSON with `"decision":"allow"` and the branding text removed from `updated_input`.
