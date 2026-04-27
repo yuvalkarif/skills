@@ -1,13 +1,13 @@
-# Skills
+# skills
 
-Practical, installable agent skills for AI coding tools.
+Agent skills compatible with Claude Code, Cursor, and other tools that load skills from `.claude/skills/`, `.cursor/skills/`, or `.agents/skills/`.
 
-## Available Skills
-
-### strip-made-with-cursor
-
-Removes "`Made with [Cursor](https://cursor.com)`" from PR descriptions. Cursor started appending it automatically, and this keeps your PRs clean and review-focused.
+## Install
 
 ```bash
-npx skills add yuvalkarif/skills/strip-made-with-cursor
+npx skills add yuvalkarif/skills/<skill-name>
 ```
+
+## Skills
+
+- `skill-reviewer` — reviews `SKILL.md` files for trigger quality, structure, and token efficiency.
